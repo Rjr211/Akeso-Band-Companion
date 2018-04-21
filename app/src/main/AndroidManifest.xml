@@ -19,6 +19,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".InputActivity"
+            android:label="@string/title_activity_input"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".WriteActivity" />
+        <activity android:name=".InputName" />
+        <activity android:name=".InputAllergies" />
+        <activity android:name=".InputConditions" />
+        <activity android:name=".InputMedications" />
+        <activity android:name=".InputContact" />
+        <activity android:name=".InputInsurance" />
+        <activity android:name=".InputNotes" />
+        <activity android:name=".InputReview"></activity>
     </application>
 
 </manifest>
