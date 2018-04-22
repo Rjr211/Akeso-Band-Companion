@@ -39,7 +39,9 @@ public class InputReview extends AppCompatActivity {
         sizeView = (TextView) findViewById(R.id.sizeit);
 
         for (int i=0; i<displays.length-1; i++){
-            displays[i].setText(InputActivity.inputs[i]);
+            if (InputActivity.inputs[i] != null && !InputActivity.inputs[i].isEmpty() ) {
+                displays[i].setText(InputActivity.inputs[i]);
+            }
         }
         String s = "Space used: "+ Integer.toString(size) +"/888";
         sizeView.setText(s);

@@ -124,7 +124,9 @@ public class InputMedications extends AppCompatActivity {
             for (int i=0; i<medications.size(); i++){
                 send = send+medications.get(i) + ",";
             }
-            send = send.substring(0,send.length()-2);
+            if (send.length() > 0) {
+                send = send.substring(0, send.length() - 1);
+            }
             InputActivity.inputs[3] = send;
         }
 

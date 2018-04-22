@@ -2,6 +2,7 @@ package com.ajustinjames.akesobandcompanion;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.RequiresPermission;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +12,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,5 +47,10 @@ public class MainActivity extends AppCompatActivity {
     public void updateBandLaunch(View v){
         Intent InputActivity = new Intent(this, InputActivity.class);
         startActivity(InputActivity);
+    }
+
+    public void eraser(View v){
+        Intent WriteActivity = new Intent(this, WriteActivity.class);
+        startActivity(WriteActivity);
     }
 }

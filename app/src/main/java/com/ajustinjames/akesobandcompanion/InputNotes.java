@@ -124,7 +124,9 @@ public class InputNotes extends AppCompatActivity {
             for (int i=0; i<notes.size(); i++){
                 send = send+notes.get(i) + ",";
             }
-            send = send.substring(0,send.length()-1);
+            if (send.length() > 0) {
+                send = send.substring(0, send.length() - 1);
+            }
             InputActivity.inputs[8] = send;
         }
 

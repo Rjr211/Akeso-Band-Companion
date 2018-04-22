@@ -2,25 +2,26 @@ package com.ajustinjames.akesobandcompanion;
 
 import android.app.AlertDialog;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.nfc.FormatException;
+import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
 import android.nfc.NfcAdapter;
+import android.nfc.Tag;
+import android.nfc.tech.Ndef;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.nfc.Tag;
-import android.nfc.tech.*;
 import android.view.View;
 import android.widget.Toast;
+
 import java.io.IOException;
-import android.nfc.NdefMessage;
+
+public class DeleteActivity extends AppCompatActivity {
 
 
-public class WriteActivity extends AppCompatActivity {
-
-    public String[] userData;
     NfcAdapter nfcAdapter;
     PendingIntent pendingIntent;
     IntentFilter writeTagFilters[];
@@ -29,10 +30,7 @@ public class WriteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_write);
-        userData = InputActivity.inputs;
-
-
+        setContentView(R.layout.activity_delete);
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         if (nfcAdapter == null) {
             //nfc not supported by your advice
@@ -55,6 +53,7 @@ public class WriteActivity extends AppCompatActivity {
         writeTagFilters = new IntentFilter[] {
                 discovery
         };
+
     }
 
     @Override
@@ -89,11 +88,9 @@ public class WriteActivity extends AppCompatActivity {
     private void write(Tag tag) throws IOException, FormatException {
         NdefRecord[] records = new NdefRecord[9];
         for (int i =0; i<records.length;i++) {
-            if (userData[i] != null) {
-                records[i] = NdefRecord.createTextRecord("en", userData[i]);
-            } else {
-                records[i] = NdefRecord.createTextRecord("en", "");
-            }
+
+            records[i] = NdefRecord.createTextRecord("en", "");
+
         }
         NdefMessage message = new NdefMessage(records);
         // Get an instance of Ndef for the tag.

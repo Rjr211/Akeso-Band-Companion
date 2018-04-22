@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ajustinjames.akesobandcompanion">
 
+    <uses-feature android:name="android.hardware.nfc" />
+
+    <uses-permission android:name="android.permission.NFC" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,7 +27,15 @@
             android:name=".InputActivity"
             android:label="@string/title_activity_input"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".WriteActivity" />
+        <activity android:name=".WriteActivity">
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
         <activity android:name=".InputName" />
         <activity android:name=".InputAllergies" />
         <activity android:name=".InputConditions" />
@@ -31,7 +43,16 @@
         <activity android:name=".InputContact" />
         <activity android:name=".InputInsurance" />
         <activity android:name=".InputNotes" />
-        <activity android:name=".InputReview"></activity>
+        <activity android:name=".InputReview" />
+        <activity android:name=".DeleteActivity">
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc_tech_filter" />
+        </activity>
     </application>
 
 </manifest>

@@ -124,7 +124,9 @@ public class InputAllergies extends AppCompatActivity {
             for (int i=0; i<allergies.size(); i++){
                 send = send+allergies.get(i) + ",";
             }
-            send = send.substring(0,send.length()-2);
+            if (send.length() > 0) {
+                send = send.substring(0, send.length() - 1);
+            }
             InputActivity.inputs[1] = send;
         }
 

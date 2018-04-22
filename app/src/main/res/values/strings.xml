@@ -28,5 +28,8 @@
     <string name="confirm">Everything looks good!</string>
     <string name="size">Space used: x/888</string>
     <string name="contact">Emergency Contact</string>
+    <string name="scan">Please tap your Akeso Band to the back of your phone</string>
+    <string name="erase">Erase Band</string>
+    <string name="cancel">Cancel</string>
 
 </resources>
