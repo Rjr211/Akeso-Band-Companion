@@ -9,6 +9,7 @@ import android.view.View;
 public class InputActivity extends AppCompatActivity {
 
     public static String[] inputs;
+    public static int usage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

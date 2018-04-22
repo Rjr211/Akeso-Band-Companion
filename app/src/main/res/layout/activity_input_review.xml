@@ -6,4 +6,268 @@
     android:layout_height="match_parent"
     tools:context=".InputReview">
 
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/confirmit"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/confirm"
+        android:onClick="startWrite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sizeit" />
+
+    <TextView
+        android:id="@+id/sizeit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="395dp"
+        android:layout_height="400dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:stretchColumns="1">
+
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="@string/name"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textStyle="bold" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text=""
+                        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/allergies"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="@string/allergies"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textStyle="bold" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/allergies1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text=""
+                        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/conditions"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="@string/conditions"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textStyle="bold" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/conditions1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text=""
+                        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/medications"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="@string/medications"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textStyle="bold" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/medications1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text=""
+                        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="@string/contact1"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textStyle="bold" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/contact1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/contact2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/insurance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="@string/insurance"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/insurance1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text=""
+                        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/insurance2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text=""
+                        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text="@string/notes"
+                        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                        android:textStyle="bold" />
+                </TableRow>
+                <TableRow android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/notes1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="3dip"
+                        android:text=""
+                        android:textAppearance="@android:style/TextAppearance.Material.Large" />
+                </TableRow>
+
+            </TableLayout>
+        </RelativeLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
