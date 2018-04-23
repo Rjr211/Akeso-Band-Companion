@@ -27,6 +27,9 @@ public class InputNotes extends AppCompatActivity {
         edit = findViewById(R.id.editText);
         list = findViewById(R.id.list);
         notes = new ArrayList<String>();
+        if (InputActivity.notes != null){
+            notes = InputActivity.notes;
+        }
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, notes);
         list.setAdapter(adapter);
     }
@@ -135,6 +138,7 @@ public class InputNotes extends AppCompatActivity {
     }
 
     public void update(){
+        InputActivity.notes = notes;
         if (notes == null){
             return;
         }

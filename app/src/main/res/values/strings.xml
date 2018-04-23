@@ -5,9 +5,9 @@
     <string name="action_cancel">About</string>
     <string name="title_activity_input">InputActivity</string>
     <string name="update">Update Band</string>
-    <string name="starter">Tap the buttom below to get started!</string>
+    <string name="starter">Tap the button below to get started!</string>
     <string name="begin">Begin</string>
-    <string name="name">What is your name?</string>
+    <string name="name">What is your full name?</string>
     <string name="nameHint">Name</string>
     <string name="next">Next</string>
     <string name="allergies">What are you allergic to?</string>
@@ -31,5 +31,7 @@
     <string name="scan">Please tap your Akeso Band to the back of your phone</string>
     <string name="erase">Erase Band</string>
     <string name="cancel">Cancel</string>
+    <string name="akeso">Technology that saves lives!</string>
+    <string name="info">Information Center</string>
 
 </resources>

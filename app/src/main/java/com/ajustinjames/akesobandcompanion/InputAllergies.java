@@ -26,6 +26,9 @@ public class InputAllergies extends AppCompatActivity {
         edit = findViewById(R.id.editText);
         list = findViewById(R.id.list);
         allergies = new ArrayList<String>();
+        if (InputActivity.allergies != null){
+            allergies = InputActivity.allergies;
+        }
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, allergies);
         list.setAdapter(adapter);
 
@@ -135,6 +138,7 @@ public class InputAllergies extends AppCompatActivity {
     }
 
     public void update(){
+        InputActivity.allergies = allergies;
         if (allergies == null){
             return;
         }

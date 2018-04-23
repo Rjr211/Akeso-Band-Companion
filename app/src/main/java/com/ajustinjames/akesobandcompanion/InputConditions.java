@@ -27,6 +27,9 @@ public class InputConditions extends AppCompatActivity {
         edit = findViewById(R.id.editText);
         list = findViewById(R.id.list);
         conditions = new ArrayList<String>();
+        if (InputActivity.conditions != null){
+            conditions = InputActivity.conditions;
+        }
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, conditions);
         list.setAdapter(adapter);
 
@@ -136,6 +139,7 @@ public class InputConditions extends AppCompatActivity {
     }
 
     public void update(){
+        InputActivity.conditions = conditions;
         if (conditions == null){
             return;
         }

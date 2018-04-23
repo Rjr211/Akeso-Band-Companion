@@ -27,8 +27,12 @@ public class InputMedications extends AppCompatActivity {
         edit = findViewById(R.id.editText);
         list = findViewById(R.id.list);
         medications = new ArrayList<String>();
+        if (InputActivity.medications != null){
+            medications = InputActivity.medications;
+        }
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, medications);
         list.setAdapter(adapter);
+
     }
 
     public void remover(View v){
@@ -135,6 +139,7 @@ public class InputMedications extends AppCompatActivity {
     }
 
     public void update(){
+        InputActivity.medications = medications;
         if (medications == null){
             return;
         }

@@ -27,16 +27,16 @@ public class InputReview extends AppCompatActivity {
         }
 
         displays = new TextView[10];
-        displays[0] = (TextView) findViewById(R.id.name1);
-        displays[1] = (TextView) findViewById(R.id.allergies1);
-        displays[2] = (TextView) findViewById(R.id.conditions1);
-        displays[3] = (TextView) findViewById(R.id.medications1);
-        displays[4] = (TextView) findViewById(R.id.contact1);
-        displays[5] = (TextView) findViewById(R.id.contact2);
-        displays[6] = (TextView) findViewById(R.id.insurance1);
-        displays[7] = (TextView) findViewById(R.id.insurance2);
-        displays[8] = (TextView) findViewById(R.id.notes1);
-        sizeView = (TextView) findViewById(R.id.sizeit);
+        displays[0] = findViewById(R.id.name1);
+        displays[1] = findViewById(R.id.allergies1);
+        displays[2] = findViewById(R.id.conditions1);
+        displays[3] = findViewById(R.id.medications1);
+        displays[4] = findViewById(R.id.contact1);
+        displays[5] = findViewById(R.id.contact2);
+        displays[6] = findViewById(R.id.insurance1);
+        displays[7] = findViewById(R.id.insurance2);
+        displays[8] = findViewById(R.id.notes1);
+        sizeView = findViewById(R.id.sizeit);
 
         for (int i=0; i<displays.length-1; i++){
             if (InputActivity.inputs[i] != null && !InputActivity.inputs[i].isEmpty() ) {
