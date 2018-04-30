@@ -106,6 +106,10 @@ public class WriteActivity extends AppCompatActivity {
         ndef.close();
         Toast.makeText(this, "Wrote to Akeso Band", Toast.LENGTH_SHORT).show();
         //return to home and clear everything
+        InputActivity.allergies = null;
+        InputActivity.conditions = null;
+        InputActivity.medications = null;
+        InputActivity.notes = null;
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
